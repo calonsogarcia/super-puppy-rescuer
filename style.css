@@ -1,0 +1,14 @@
+.screen{
+    background: url("./images/SplashScreen-Bg.png");
+    width: 1000px;
+    height: 700px;
+}
+
+
+#my-canvas{
+    display: none;
+}
+
+#gameover-screen{
+    display: none;
+}

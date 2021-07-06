@@ -4,28 +4,44 @@ https://github.com/calonsogarcia/super-puppy-rescuer.git
 
 
 Description
-A kid has to walk horizontally while puppies and other animals appear. 
+A kid has to walk while puppies and other animals appear. 
 The kid has to cach up the puppies and jump over the other animals/grandma's.
 The game ends when the kid collides with a scaring animal or a grandma.
-(BONUS! Also can appear grandma's which ones gives bonuses if you jump or makes you die if you collide)
+(BONUS 1! Also can appear grandma's which ones gives bonuses if you jump or makes you die if you collide)
 
 
 MVP
 . It has 1 kid that moves horizontally and vertically for jumping obstacles
 . The puppies, scaring animals and grandma's come from the right side of the screen
-. The game is over when there's a collision with a scaring animal or a grandma (BONUS! 5 scaring animal collisions and 1 grandma collision)
-. Final reult: number of puppies (BONUS! Different points depending on the puppy type)
+. The game is over when there's a collision with a scaring animal or a grandma (BONUS 3! 5 scaring animal collisions and 1 grandma collision)
+. Final reult: number of puppies (BONUS 4! Different points depending on the puppy type)
 . Increasing velocity
-. (Bonus! Choose kind of kid to play)
+. (BONUS 2! Choose kind of kid to play)
 
 
 Backlog
-...
+BONUS 1!
+BONUS 2!
+BONUS 3!
+BONUS 4!
+
 
 
 Data Structure
-- main.js
-- game.js
+
+main.js
+. splashScreen()
+. gameScreen()
+. selectPlayerScreen()
+. gameoverScreen()
+. addEventListeners()
+
+
+game.js
+. generatePuppies()
+. generateEnemies()
+. gameLoop()
+. checkGameover()
 
 kid.js
 . kid() {this.x; this.y; this.with; this.height; this.image}
@@ -36,20 +52,16 @@ kid.js
 
 animals.js
 . puppy() {this.x; this.y; this.with; this.height; this.speed; this.image}
-. wildAnimal()
 . drawAnimals()
 . moveAnimals()
-. jumpAnimals()
 . checkCollision()
 
-grandmas.js
+enemies.js
+. wildAnimal()
 . grandmas() {this.x; this.y; this.with; this.height; this.speed; this.image}
 . drawGrandmas()
 . moveGrandmas()
-. jumpGrandmas()
 . checkCollision()
-
-// Maybe animals and grandmas could go together?
 
 
 States and States transitions
@@ -60,6 +72,14 @@ States and States transitions
 
 
 Task
+index.html
+main.js
+canvas
+splashScreen
+gameoverScreen
+kid
+animals
+enemies
 
 
 Aditional links
