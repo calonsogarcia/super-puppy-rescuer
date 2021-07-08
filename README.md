@@ -32,7 +32,6 @@ Data Structure
 main.js
 . splashScreen()
 . gameScreen()
-. selectPlayerScreen()
 . gameoverScreen()
 . addEventListeners()
 
@@ -50,17 +49,16 @@ kid.js
 . jumpKid()
 . checkCollision()
 
-animals.js
+puppies.js
 . puppy() {this.x; this.y; this.with; this.height; this.speed; this.image}
-. drawAnimals()
-. moveAnimals()
+. drawPuppies()
+. movePuppies()
 . checkCollision()
 
 enemies.js
-. wildAnimal()
-. grandmas() {this.x; this.y; this.with; this.height; this.speed; this.image}
-. drawGrandmas()
-. moveGrandmas()
+. enemies() {this.x; this.y; this.with; this.height; this.speed; this.image}
+. drawEnemies()
+. moveEnemies()
 . checkCollision()
 
 
