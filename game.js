@@ -1,15 +1,14 @@
 class Game {
     constructor(){
         this.bg = new Image();
-        this.bg.src = "./images/Game Screen-Bg.png";
-        this.kid;
-        this.puppies = [];
-        this.enemies = [];
+        this.bg.src = "./images/GameScreen-Bg.png";
+        this.kid = new Kid();
+        this.puppyArr = [];
+        this.enemyArr = [];
     }
 
 
     generatePuppy = () => {
-
     }
 
     generateEnemy = () => {
@@ -25,6 +24,7 @@ class Game {
 
         // 3. drawing elements
         ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height)
+        this.kid.drawKid()
 
         // 4. request animation
         requestAnimationFrame(this.gameLoop)

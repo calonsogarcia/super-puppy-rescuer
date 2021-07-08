@@ -1,18 +1,30 @@
 class Kid {
     constructor() {
         this.x = 10;
+        this.width = 100; 
+        this.height = 200; 
         this.y = canvas.height - this.height; 
-        this.with = 10; 
-        this.height = 20; 
+       
         this.image = new Image();
         this.image.src = "../images/Super-kid.png"
         //this.speed???
     }
     
-  /*  
-    drawKid();
-    moveKid();
-    jumpKid()
-    checkCollision()
-    */
+  
+    drawKid = () => {
+        ctx.drawImage(this.image, this.x, this.y, this.width, this.height)
+    }
+
+
+    moveKid = () => {
+
+    }
+    
+
+    jumpKid = () => {
+
+    }
+
+    // checkCollision = () => {} ???
+   
 }

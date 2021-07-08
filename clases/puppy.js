@@ -1,12 +1,12 @@
 class Puppy {
     constructor(positionY, someURL) {
-        this.x = canvas.with; 
+        this.x = canvas.width; 
         this.y = positionY; 
-        this.with; 
+        this.width; 
         this.height; 
         this.speed = 1; 
         this.image = new Image;
-        this.image.src = someURL;
+        this.image.src;
     }
 
     /*
