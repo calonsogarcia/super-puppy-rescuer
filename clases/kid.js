@@ -1,10 +1,9 @@
 class Kid {
     constructor() {
         this.x = 10;
-        this.width = 100; 
-        this.height = 200; 
-        this.y = canvas.height - this.height; 
-       
+        this.width = 60; 
+        this.height = 100; 
+        this.y = canvas.height / 2; 
         this.image = new Image();
         this.image.src = "../images/Super-kid.png"
         //this.speed???
@@ -15,16 +14,43 @@ class Kid {
         ctx.drawImage(this.image, this.x, this.y, this.width, this.height)
     }
 
-
-    moveKid = () => {
-
+    kidGravity = () => {
+        if (this.y + this.height < canvas.height)
+        this.y++
     }
     
 
-    jumpKid = () => {
+    /*
+    moveKid = () => {
+        if(this.x > canvas.width){
+            this.x++
+        }else if (this.x > canvas.width){
+            this.x--
+        }
+    }
+    */
+    
 
+    jumpKid = () => {
+        this.y -= 100;
     }
 
-    // checkCollision = () => {} ???
+    kidEnemyCollision = (enemy) => {
+        return this.x < enemy.x + enemy.width &&
+            this.x + this.width > enemy.x &&
+            this.y < enemy.y + enemy.height &&
+            this.y + this.height > enemy.y  
+    }
+
+
+    kidPuppyColission = (puppy) => {
+        if (this.x < puppy.x + puppy.width &&
+            this.x + this.width > puppy.x &&
+            this.y < puppy.y + puppy.height &&
+            this.y + this.height > puppy.y) {
+              // collision detected!
+              return true
+         }
+    }
    
 }

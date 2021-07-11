@@ -6,9 +6,16 @@ let splashScreen = document.querySelector("#splash-screen")
 let startButton = document.querySelector("#start-btn")
 let gameoverScreen = document.querySelector ("#gameover-screen")
 let restartButton = document.querySelector ("#restart-btn")
+let puppyCounter = document.querySelector ("#puppy-counter")
+let timeCounter = document.querySelector ("#time-counter")
 
-let game;
+let gameObj;
 
+
+timeCounter.incrementSeconds = () => {
+    seconds += 1;
+    timeCounter.innerText = `Time played: ${seconds}`;
+}
 
 // Event listeners
 startButton.addEventListener("click", () => {
@@ -18,9 +25,13 @@ startButton.addEventListener("click", () => {
     //console.log("hello")
 
     //start the game
-    game = new Game();
-    game.gameLoop()
+    gameObj = new Game();
+    gameObj.gameLoop()
     
+})
+
+canvas.addEventListener("click", () => {
+    gameObj.kid.jumpKid()
 })
 
 
@@ -29,6 +40,6 @@ restartButton.addEventListener("click", () => {
     gameoverScreen.style.display = "none";
 
     //restart the game
-    game = new Game();
-    game.gameLoop()
+    gameObj = new Game();
+    gameObj.gameLoop()
 })

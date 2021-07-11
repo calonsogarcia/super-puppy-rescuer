@@ -37,8 +37,8 @@ main.js
 
 
 game.js
-. generatePuppies()
-. generateEnemies()
+. generatePuppy()
+. generateEnemy()
 . gameLoop()
 . checkGameover()
 
@@ -49,17 +49,15 @@ kid.js
 . jumpKid()
 . checkCollision()
 
-puppies.js
+puppy.js
 . puppy() {this.x; this.y; this.with; this.height; this.speed; this.image}
-. drawPuppies()
-. movePuppies()
-. checkCollision()
+. drawPuppy()
+. movePuppy()
 
-enemies.js
+enemy.js
 . enemies() {this.x; this.y; this.with; this.height; this.speed; this.image}
-. drawEnemies()
-. moveEnemies()
-. checkCollision()
+. drawEnemy()
+. moveEnemy()
 
 
 States and States transitions

@@ -2,16 +2,19 @@ class Puppy {
     constructor(positionY, someURL) {
         this.x = canvas.width; 
         this.y = positionY; 
-        this.width; 
-        this.height; 
-        this.speed = 1; 
+        this.width= 55; 
+        this.height = 100; 
+        this.speed = 2; 
         this.image = new Image;
-        this.image.src;
+        this.image.src = someURL;
     }
 
-    /*
-    drawPuppy()
-    movePuppy()
-    checkCollision()
-    */
+    drawPuppy = () => {
+        ctx.drawImage(this.image, this.x, this.y, this.width, this.height)
+    }
+
+    movePuppy = () => {
+        this.x = this.x - this.speed 
+    }
+
 }
