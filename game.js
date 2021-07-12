@@ -6,6 +6,7 @@ class Game {
         this.puppyArr = [];
         this.enemyArr = [];
         this.isGameOn = true;
+        this.counter = 0;
     }
 
 
@@ -13,11 +14,13 @@ class Game {
         let lastPuppyIndex = this.puppyArr.length - 1
         this.puppyArr[lastPuppyIndex]
         if (!this.puppyArr.length || this.puppyArr[lastPuppyIndex].x <= canvas.width / 2){
-            let randomPos = Math.floor(Math.random() * canvas.height * 2)
+
+            //tryig to make them apeare just inside the canvas and randomly between them
+            let randomPos = Math.floor(Math.random() * canvas.height - 100)
             let puppy = new Puppy(randomPos, "./images/Puppy.png")
             this.puppyArr.push(puppy)
            
-            let randomPos2 = Math.floor(Math.random() * canvas.height * 1.5)
+            let randomPos2 = Math.floor(Math.random() * canvas.height ) - 100
             let puppy2 = new Puppy(randomPos2, "./images/Puppy2.png")
             this.puppyArr.push(puppy2)
         }
@@ -38,12 +41,18 @@ class Game {
 
    checkPuppyCollision = () => {
        this.puppyArr.forEach((eachPuppy) => {
-           let counter = 0
            if(this.kid.kidPuppyColission(eachPuppy)){
             this.puppyArr.splice(0,1)
-            counter++
+            this.counter++
            }
        })
+   }
+
+   
+   checkPuppyCollisionCounter = () => {
+       ctx.font = "20px arial MS"
+       ctx.fillStyle = "black"
+       ctx.fillText(`Puppies rescued: ${this.counter}`, canvas.height /  0.8 , canvas.width / 17)
    }
 
 
@@ -87,6 +96,7 @@ class Game {
         this.puppyArr.forEach((eachPuppy) => {
             eachPuppy.drawPuppy()
         })
+        this.checkPuppyCollisionCounter(this.checkPuppyCollision())
         
 
         // 4. request animation

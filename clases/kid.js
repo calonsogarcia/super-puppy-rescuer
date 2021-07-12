@@ -20,15 +20,15 @@ class Kid {
     }
     
 
-    /*
-    moveKid = () => {
-        if(this.x > canvas.width){
-            this.x++
-        }else if (this.x > canvas.width){
-            this.x--
+/*
+    moveKid = (event) => {
+        if(event.code === "ArrowRight" && this.x  + this.width < canvas.width){
+            this.x += 10
+        }else if(event.code === "ArrowLeft" && this.x > 0){
+            this.x -= 10
         }
     }
-    */
+*/
     
 
     jumpKid = () => {

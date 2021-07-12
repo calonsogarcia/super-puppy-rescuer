@@ -5,26 +5,16 @@ https://github.com/calonsogarcia/super-puppy-rescuer.git
 
 Description
 A kid has to walk while puppies and other animals appear. 
-The kid has to cach up the puppies and jump over the other animals/grandma's.
-The game ends when the kid collides with a scaring animal or a grandma.
-(BONUS 1! Also can appear grandma's which ones gives bonuses if you jump or makes you die if you collide)
+The kid has to cach up the puppies and jump over the grandma's.
+The game ends when the kid collides with a grandma.
 
 
 MVP
 . It has 1 kid that moves horizontally and vertically for jumping obstacles
-. The puppies, scaring animals and grandma's come from the right side of the screen
-. The game is over when there's a collision with a scaring animal or a grandma (BONUS 3! 5 scaring animal collisions and 1 grandma collision)
-. Final reult: number of puppies (BONUS 4! Different points depending on the puppy type)
+. The puppies and the grandma's come from the right side of the screen
+. The game is over when there's a collision with a grandma
+. Final reult: number of puppies
 . Increasing velocity
-. (BONUS 2! Choose kind of kid to play)
-
-
-Backlog
-BONUS 1!
-BONUS 2!
-BONUS 3!
-BONUS 4!
-
 
 
 Data Structure
@@ -62,7 +52,6 @@ enemy.js
 
 States and States transitions
 . splashScreen
-. (Bonus! choose player screen)
 . gameScreen
 . gameoverScreen
 
