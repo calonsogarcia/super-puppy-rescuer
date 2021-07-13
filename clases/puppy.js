@@ -1,6 +1,6 @@
 class Puppy {
-    constructor(positionY, someURL) {
-        this.x = canvas.width; 
+    constructor(positionY, positionX, someURL) {
+        this.x = positionX; 
         this.y = positionY; 
         this.width= 55; 
         this.height = 100; 
@@ -16,5 +16,4 @@ class Puppy {
     movePuppy = () => {
         this.x = this.x - this.speed 
     }
-
 }

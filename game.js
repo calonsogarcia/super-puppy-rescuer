@@ -12,16 +12,18 @@ class Game {
 
     generatePuppy = () => {
         let lastPuppyIndex = this.puppyArr.length - 1
-        this.puppyArr[lastPuppyIndex]
-        if (!this.puppyArr.length || this.puppyArr[lastPuppyIndex].x <= canvas.width / 2){
+        // this.puppyArr[lastPuppyIndex]
+        if (!this.puppyArr.length || this.puppyArr[lastPuppyIndex].x <= canvas.width * 0.75){
 
             //tryig to make them apeare just inside the canvas and randomly between them
-            let randomPos = Math.floor(Math.random() * canvas.height - 100)
-            let puppy = new Puppy(randomPos, "./images/Puppy.png")
+            let randomPos = Math.floor(Math.random() * (canvas.height - 100))
+            let randomPosX = Math.floor(Math.random() * 600) + canvas.width
+            let puppy = new Puppy(randomPos, randomPosX, "./images/Puppy.png")
             this.puppyArr.push(puppy)
            
-            let randomPos2 = Math.floor(Math.random() * canvas.height ) - 100
-            let puppy2 = new Puppy(randomPos2, "./images/Puppy2.png")
+            let randomPos2 = Math.floor(Math.random() * (canvas.height - 100))
+            let randomPosX2 = Math.floor(Math.random() * 600) + canvas.width
+            let puppy2 = new Puppy(randomPos2, randomPosX2, "./images/Puppy2.png")
             this.puppyArr.push(puppy2)
         }
     }
@@ -29,20 +31,29 @@ class Game {
     generateEnemy = () => {
         if (!this.enemyArr.length || this.enemyArr[this.enemyArr.length - 1].x <= canvas.width / 2){
            
-            let randomPos = Math.floor(Math.random() * canvas.height * 2)
-            let enemy = new Enemy(randomPos, "./images/Grandma.png")
+            let randomPos = Math.floor(Math.random() * (canvas.height - 100))
+            let randomPosX = Math.floor(Math.random() * 600) + canvas.width
+            let enemy = new Enemy(randomPos, randomPosX, "./images/Grandma.png")
             this.enemyArr.push(enemy)
            
-            let randomPos2 = Math.floor(Math.random() * canvas.height * 1.5)
-            let enemy2 = new Enemy(randomPos2, "./images/Grandma2.png")
+            let randomPos2 = Math.floor(Math.random() * (canvas.height - 100))
+            let randomPosX2 = Math.floor(Math.random() * 600) + canvas.width
+            let enemy2 = new Enemy(randomPos2, randomPosX2, "./images/Grandma2.png")
             this.enemyArr.push(enemy2)
         }
     }
 
+   /* increasePuppySpeed = () => {
+        if(this.checkPuppyCollision()){
+            puppy.speed++
+        }
+    }*/
+
+
    checkPuppyCollision = () => {
-       this.puppyArr.forEach((eachPuppy) => {
+       this.puppyArr.forEach((eachPuppy, index) => {
            if(this.kid.kidPuppyColission(eachPuppy)){
-            this.puppyArr.splice(0,1)
+            this.puppyArr.splice(index,1)
             this.counter++
            }
        })
@@ -54,6 +65,7 @@ class Game {
        ctx.fillStyle = "black"
        ctx.fillText(`Puppies rescued: ${this.counter}`, canvas.height /  0.8 , canvas.width / 17)
    }
+
 
 
     checkGameover = () => {
@@ -84,6 +96,7 @@ class Game {
         })
         this.checkGameover()
         this.checkPuppyCollision()
+     //   this.increasePuppySpeed()
 
         // 3. drawing elements
         ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height)
@@ -96,7 +109,7 @@ class Game {
         this.puppyArr.forEach((eachPuppy) => {
             eachPuppy.drawPuppy()
         })
-        this.checkPuppyCollisionCounter(this.checkPuppyCollision())
+        this.checkPuppyCollisionCounter()
         
 
         // 4. request animation

@@ -1,12 +1,11 @@
 class Kid {
     constructor() {
         this.x = 10;
-        this.width = 60; 
-        this.height = 100; 
+        this.width = 50; 
+        this.height = 80; 
         this.y = canvas.height / 2; 
         this.image = new Image();
         this.image.src = "../images/Super-kid.png"
-        //this.speed???
     }
     
   
@@ -20,19 +19,23 @@ class Kid {
     }
     
 
-/*
+
     moveKid = (event) => {
         if(event.code === "ArrowRight" && this.x  + this.width < canvas.width){
             this.x += 10
         }else if(event.code === "ArrowLeft" && this.x > 0){
             this.x -= 10
+        }else if(event.code === "ArrowDown" && this.y > 0){
+            this.y += 10
         }
     }
-*/
     
 
     jumpKid = () => {
         this.y -= 100;
+        if(this.y < 0){
+            this.y = 0
+        }
     }
 
     kidEnemyCollision = (enemy) => {

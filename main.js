@@ -6,8 +6,6 @@ let splashScreen = document.querySelector("#splash-screen")
 let startButton = document.querySelector("#start-btn")
 let gameoverScreen = document.querySelector ("#gameover-screen")
 let restartButton = document.querySelector ("#restart-btn")
-//let puppyCounter = document.querySelector ("#puppy-counter")
-//let timeCounter = document.querySelector ("#time-counter")
 
 let gameObj;
 
@@ -32,13 +30,13 @@ startButton.addEventListener("click", () => {
 })
 
 canvas.addEventListener("click", () => {
-    gameObj.kid.jumpKid()
+  gameObj.kid.jumpKid()
 })
 
-/*
-canvas.addEventListener("keydowm", () => {
-    gameObj.kid.moveKid()
-})*/
+
+window.addEventListener("keydown", (event) => {
+    gameObj.kid.moveKid(event)
+})
 
 
 restartButton.addEventListener("click", () => {
