@@ -1,9 +1,48 @@
-.screen{
+.start-screen{
     background: url("./images/SplashScreen-Bg.png");
-    width: 1000px;
+    width: 950px;
     height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    text-shadow: 2px 2px black;
+    color: rgb(130, 1, 235);
 }
 
+.game-over-screen{
+    background: url("./images/GameoverScreen.png");
+    width: 950px;
+    height: 600px;
+    font-size: 30px;
+    color: #ffdcc4;
+    text-shadow: 3px 3px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#counter{
+    font-size: 25px;
+}
+
+.start-btn{
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+    color: rgb(130, 1, 235);
+    background:rgb(167, 240, 240)
+}
+
+.restart-btn{
+    width: 230px;
+    height: 40px;
+    font-size: 18px;
+    color: rgb(82, 12, 35);
+    background:rgb(106, 255, 118)
+}
 
 #my-canvas{
     display: none;
@@ -12,3 +51,5 @@
 #gameover-screen{
     display: none;
 }
+
+

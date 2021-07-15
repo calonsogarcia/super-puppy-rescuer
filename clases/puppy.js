@@ -1,10 +1,10 @@
 class Puppy {
-    constructor(positionY, positionX, someURL) {
+    constructor(positionY, positionX, puppySpeed, someURL) {
         this.x = positionX; 
         this.y = positionY; 
         this.width= 55; 
         this.height = 100; 
-        this.speed = 2; 
+        this.speed = puppySpeed; 
         this.image = new Image;
         this.image.src = someURL;
     }

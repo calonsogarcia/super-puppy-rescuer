@@ -27,7 +27,8 @@ class Kid {
             this.x -= 10
         }else if(event.code === "ArrowDown" && this.y > 0){
             this.y += 10
-        }
+        }else if(event.code === "ArrowUp" && this.y  + this.height < canvas.height){
+            this.y -= 10}
     }
     
 

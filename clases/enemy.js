@@ -1,10 +1,10 @@
 class Enemy {
-    constructor(positionY, positionX, someURL) {
+    constructor(positionY, positionX, enemySpeed, someURL) {
         this.x = positionX; 
         this.y = positionY; 
         this.width= 45; 
         this.height = 100; 
-        this.speed = 2; 
+        this.speed = enemySpeed; 
         this.image = new Image;
         this.image.src = someURL;
     }
