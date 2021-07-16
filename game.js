@@ -9,6 +9,7 @@ class Game {
         this.counter = 0;
         this.currentPuppySpeed = 2;
         this.currentEnemySpeed = 2.5;
+        this.sound = new Music("./music/Clip2.mp3");
     }
 
 
@@ -51,8 +52,8 @@ class Game {
            if(this.kid.kidPuppyColission(eachPuppy)){
             this.puppyArr.splice(index,1)
             this.counter++
-            this.currentPuppySpeed += 0.2
-            this.currentEnemySpeed += 0.3
+            this.currentPuppySpeed += 0.1
+            this.currentEnemySpeed += 0.2
            }
        })
    }
@@ -64,7 +65,7 @@ class Game {
        ctx.fillText(`Puppies rescued: ${this.counter}`, canvas.height /  0.8 , canvas.width / 17)
    }
 
-
+  
 
     checkGameover = () => {
         this.enemyArr.forEach((eachEnemy) => {
@@ -75,7 +76,7 @@ class Game {
                 canvas.style.display = "none"
                 gameoverScreen.style.display = "flex"
                 rescuedPuppiesCounter.innerHTML = `Total puppies rescued: ${this.counter}`
-                //stop music
+                this.sound.play()
             }
         })
     }
@@ -96,7 +97,6 @@ class Game {
         })
         this.checkGameover()
         this.checkPuppyCollision()
-     //   this.increasePuppySpeed()
 
         // 3. drawing elements
         ctx.drawImage(this.bg, 0, 0, canvas.width, canvas.height)

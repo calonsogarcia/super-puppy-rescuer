@@ -11,6 +11,8 @@ let rescuedPuppiesCounter = document.querySelector("#counter")
 let gameObj;
 
 
+
+
 // Event listeners
 startButton.addEventListener("click", () => {
     canvas.style.display = "block";
@@ -20,7 +22,7 @@ startButton.addEventListener("click", () => {
 
     //start the game
     gameObj = new Game();
-   // music
+    gameObj.sound.play()
     gameObj.gameLoop()
     
 })
@@ -41,6 +43,6 @@ restartButton.addEventListener("click", () => {
 
     //restart the game
     gameObj = new Game();
-    //musica
+    gameObj.sound.play()
     gameObj.gameLoop()
 })
