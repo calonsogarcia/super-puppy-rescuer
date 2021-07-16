@@ -22,7 +22,7 @@ startButton.addEventListener("click", () => {
 
     //start the game
     gameObj = new Game();
-    gameObj.sound.play()
+    gameObj.sound.play();
     gameObj.gameLoop()
     
 })

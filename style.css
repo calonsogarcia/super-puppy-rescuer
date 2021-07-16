@@ -9,6 +9,7 @@
     font-size: 30px;
     text-shadow: 2px 2px black;
     color: rgb(130, 1, 235);
+    margin: 5rem 10rem;
 }
 
 .game-over-screen{
@@ -22,6 +23,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 5rem 10rem;
 }
 
 #counter{
@@ -46,6 +48,7 @@
 
 #my-canvas{
     display: none;
+    margin: 5rem 10rem;
 }
 
 #gameover-screen{

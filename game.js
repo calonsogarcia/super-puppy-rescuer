@@ -9,7 +9,7 @@ class Game {
         this.counter = 0;
         this.currentPuppySpeed = 2;
         this.currentEnemySpeed = 2.5;
-        this.sound = new Music("./music/Clip2.mp3");
+        this.sound = new Audio("./music/Clip2.mp3")
     }
 
 
@@ -76,7 +76,8 @@ class Game {
                 canvas.style.display = "none"
                 gameoverScreen.style.display = "flex"
                 rescuedPuppiesCounter.innerHTML = `Total puppies rescued: ${this.counter}`
-                this.sound.play()
+                this.sound.pause()
+                this.sound.currentTime = 0
             }
         })
     }
