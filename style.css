@@ -35,7 +35,7 @@
     height: 50px;
     font-size: 20px;
     color: rgb(130, 1, 235);
-    background:rgb(167, 240, 240)
+    background:rgb(167, 240, 240);
 }
 
 .restart-btn{
@@ -43,7 +43,7 @@
     height: 40px;
     font-size: 18px;
     color: rgb(82, 12, 35);
-    background:rgb(106, 255, 118)
+    background:rgb(106, 255, 118);
 }
 
 #my-canvas{
@@ -55,4 +55,14 @@
     display: none;
 }
 
-
+.controllers{
+    display: flex;
+    color: black;
+    text-shadow: none;
+    font-size: 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0;
+}

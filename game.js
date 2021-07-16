@@ -10,6 +10,7 @@ class Game {
         this.currentPuppySpeed = 2;
         this.currentEnemySpeed = 2.5;
         this.sound = new Audio("./music/Clip2.mp3")
+        this.sound.volume = 0.1
     }
 
 
