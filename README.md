@@ -7,9 +7,9 @@ The game ends when the kid collides with a grandma.
 
 
 ## **MVP**
-> It has 1 kid that jumps to avoid obstacles
-> The puppies and the grandma's come from the right side of the screen
-> The game is over when there's a collision with a grandma
+* It has 1 kid that jumps to avoid obstacles
+* The puppies and the grandma's come from the right side of the screen
+* The game is over when there's a collision with a grandma
 
 
 
