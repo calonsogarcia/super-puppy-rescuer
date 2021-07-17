@@ -7,9 +7,9 @@ The game ends when the kid collides with a grandma.
 
 
 ## **MVP**
-* It has 1 kid that jumps to avoid obstacles
-* The puppies and the grandma's come from the right side of the screen
-* The game is over when there's a collision with a grandma
+> It has 1 kid that jumps to avoid obstacles
+> The puppies and the grandma's come from the right side of the screen
+> The game is over when there's a collision with a grandma
 
 
 
@@ -60,20 +60,20 @@ The game ends when the kid collides with a grandma.
 * canvas
 * splashScreen
 * gameoverScreen
-create kid
-create puppies
-create enemies
-movements (basic)
-collisions
-counter
-veloity
-movements (forward/backward)
-music
-style.css (complete)
+* create kid
+* create puppies
+* create enemies
+* movements (basic)
+* collisions
+* counter
+* veloity
+* movements (forward/backward)
+* music
+* style.css (complete)
 
 
 
-##Aditional links
+## Aditional links
 - Trello
 https://trello.com/invite/b/E953L6kC/d163dbbe7cdc5a52538daad0dc003c64/game
 
