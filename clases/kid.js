@@ -5,7 +5,7 @@ class Kid {
         this.height = 80; 
         this.y = canvas.height / 2; 
         this.image = new Image();
-        this.image.src = "../images/Super-kid.png"
+        this.image.src = "./images/Super-kid.png"
     }
     
   

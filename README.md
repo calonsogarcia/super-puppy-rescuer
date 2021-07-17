@@ -1,64 +1,65 @@
-#Super Puppy Rescuer
+# **Super Puppy Rescuer**
 
-##Description
+## **Description**
 A Supper-Kid has to walk and jump to catch up the puppies while grandmothers appear. 
 The kid has to jump over the grandma's to continue the game.
 The game ends when the kid collides with a grandma.
 
 
-##MVP
+## **MVP**
 * It has 1 kid that jumps to avoid obstacles
 * The puppies and the grandma's come from the right side of the screen
 * The game is over when there's a collision with a grandma
 
 
-##Data Structure
 
-###main.js
+## **Data Structure**
+
+### main.js
 * splashScreen()
 * gameScreen()
 * gameoverScreen()
 * addEventListeners()
 
-###game.js
-. generatePuppy()
-. generateEnemy()
-. checkCollision()
-. counter()
-. checkGameover()
-. gameLoop()
+### game.js
+* generatePuppy()
+* generateEnemy()
+* checkCollision()
+* counter()
+* checkGameover()
+* gameLoop()
 
-###kid.js
-. kid() {this.x; this.y; this.with; this.height; this.image}
-. drawKid()
-. jumpKid()
-. moveKid()
-. checkCollision()
+### kid.js
+* kid() {this.x; this.y; this.with; this.height; this.image}
+* drawKid()
+* jumpKid()
+* moveKid()
+* checkCollision()
 
-###puppy.js
-. puppy() {this.x; this.y; this.with; this.height; this.speed; this.image}
-. drawPuppy()
-. movePuppy()
+### puppy.js
+* puppy() {this.x; this.y; this.with; this.height; this.speed; this.image}
+* drawPuppy()
+* movePuppy()
 
-###enemy.js
-. enemies() {this.x; this.y; this.with; this.height; this.speed; this.image}
-. drawEnemy()
-. moveEnemy()
-
-
-##States and States transitions
-. splashScreen
-. gameScreen
-. gameoverScreen
+### enemy.js
+* enemies() {this.x; this.y; this.with; this.height; this.speed; this.image}
+* drawEnemy()
+* moveEnemy()
 
 
-##Task
-index.html
-style.css (basic)
-main.js
-canvas
-splashScreen
-gameoverScreen
+## States and States transitions
+* splashScreen
+* gameScreen
+* gameoverScreen
+
+
+## Task
+* index.html
+* style.css (basic)
+* main.js
+* canvas
+* splashScreen
+* gameoverScreen
 create kid
 create puppies
 create enemies
